@@ -1,9 +1,5 @@
  version: '3.3'
 
- #networks:
- #default:
- #external:
- #name: app_test
  services:
         nginx:
              image: nginx:latest
@@ -14,15 +10,5 @@
 
         app1:
                 image: containous/whoami
-                #  ports:
-                        #     - 81:80
-                environment:
-                        VIRTUAL_HOST : app1.test
-                        # networks:
-                        #- app1-proxy
         app2:
                 image: containous/whoami
-                environment:
-                        VIRTUAL_HOST : app2.test
-         #networks:
-         #- app2-proxy
